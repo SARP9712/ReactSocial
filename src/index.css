@@ -1,13 +1,105 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --twitter-blue: #1da1f2;
+  --twitter-bg: #e6ecf0;
+  --twitter-light-gray: #f5f8fa;
+  --twitter-dark-gray: #657786;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: var(--twitter-bg);
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.post {
+  background: #fff;
+  border-bottom: 1px solid var(--twitter-light-gray);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.avatar-name{
+display: flex;
+align-items: center;
+}
+
+.avatar-name p {
+    font-weight: bold;
+
+}
+
+.box-comment {
+	padding: 1rem;
+}
+
+.user-comment {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+.post p {
+  font-size: 15px;
+  margin: 0 0 10px 0;
+  color: #14171a;
+}
+
+.likes {
+  display: inline-flex;
+  align-items: center;
+  color: var(--twitter-dark-gray);
+  cursor: pointer;
+  user-select: none;
+}
+
+.likes:hover {
+  color: var(--twitter-blue);
+}
+
+.likes span {
+  margin-left: 5px;
+}
+
+.comment {
+  margin-left: 20px;
+  font-size: 14px;
+  color: var(--twitter-dark-gray);
+}
+
+textarea, input {
+  width: 95%;
+  font-size: 15px;
+  padding: 10px;
+  border: 2px solid var(--twitter-light-gray);
+  border-radius: 20px;
+  outline: none;
+  margin-bottom: 10px;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+textarea:focus, input:focus {
+  border-color: var(--twitter-blue);
+}
+
+button {
+  background: var(--twitter-blue);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
 }
